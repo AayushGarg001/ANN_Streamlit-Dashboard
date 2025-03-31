@@ -16,7 +16,7 @@ ag01_df = pd.read_csv(DATASET_URL, encoding='latin1', on_bad_lines='warn')
 
 
 # Data Preprocessing
-ag01_df.drop(columns=['campaign_id'], inplace=True)
+ag01_df.drop(columns=['campaign_id'], errors='ignore', inplace=True)
 
 ag01_categorical_cols = ['company_size', 'industry', 'marketing_channel', 'target_audience_area', 'target_audience_age',
                     'region', 'device', 'operating_system', 'browser', 'success']

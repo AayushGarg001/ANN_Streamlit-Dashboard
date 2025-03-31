@@ -12,7 +12,7 @@ import streamlit as st
 
 # Load dataset
 DATASET_URL = "https://github.com/AayushGarg001/ANN_Streamlit-Dashboard/blob/main/digital_marketing_campaigns_smes_.csv"
-ag01_df = pd.read_csv(DATASET_URL)
+ag01_df = pd.read_csv(DATASET_URL, encoding='latin1')
 
 # Data Preprocessing
 ag01_df.drop(columns=['campaign_id'], inplace=True)
